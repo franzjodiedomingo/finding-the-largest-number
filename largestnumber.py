@@ -18,4 +18,15 @@ else:
     largest = num3
 
 #Print the largest number
-print("The largest number is:", largest)
+print("The largest number is: ", largest)
+
+# Create a list of the numbers
+numbers = [num1, num2, num3]
+
+# Sort the numbers in descending order
+numbers.sort(reverse=True)
+
+# Display the numbers from highest to lowest
+print("Numbers from highest to lowest:")
+for number in numbers:
+    print(number)
