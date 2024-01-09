@@ -4,8 +4,10 @@
 num1 = (input("Enter first number: "))
 
 #Enter the second number
+num2 = (input("Enter second number: "))
 
 #Enter the third number
+num3 = (input("Enter third number: "))
 
 #Compare the 3 given numbers
 
