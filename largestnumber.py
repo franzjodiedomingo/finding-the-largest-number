@@ -1,6 +1,7 @@
 #Ask input from the user
 
 #Enter the first number
+num1 = (input("Enter first number: "))
 
 #Enter the second number
 
