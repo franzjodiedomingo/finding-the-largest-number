@@ -25,7 +25,7 @@ def find_largest():
            largest = num3
 
         #Display the largest number
-        result_label.config(text="The largest number is:".format(largest))
+        result_label.config(text="The largest number is:{}".format(largest))
 
         # Sort the numbers in descending order
         numbers.sort(reverse=True)
@@ -57,13 +57,13 @@ compare_button = tk.Button(root, text="Compare Numbers", command=find_largest)
 #Layout
 label1.grid(row=0, column=0, sticky='w')
 firstnumber.grid(row=0, column=1)
-label2.grid(row=0, column=0, sticky='w')
-secondnumber.grid(row=0, column=1)
-label3.grid(row=0, column=0, sticky='w')
-thirdnumber.grid(row=0, column=1)
+label2.grid(row=1, column=0, sticky='w')
+secondnumber.grid(row=1, column=1)
+label3.grid(row=2, column=0, sticky='w')
+thirdnumber.grid(row=2, column=1)
 
 compare_button.grid(row=3, column=0, columnspan=2, pady=10)
 result_label.grid(row=4, column=0, columnspan=2)
 sorted_numbers_print.grid(row=5, column=0, columnspan=2)
 
-root.mainloop
+root.mainloop()
