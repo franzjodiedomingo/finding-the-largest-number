@@ -2,7 +2,7 @@ import tkinter as tk
 from tkinter import messagebox
 
 #Ask input from the user
-def finding_the_largest_number():
+def find_largest():
     try: 
         #Enter the first number
         num1 = int(firstnumber.get())
@@ -31,7 +31,7 @@ def finding_the_largest_number():
         numbers.sort(reverse=True)
 
         # Display the numbers from highest to lowest
-        sorted_numbers_print.config(text="Numbers from highest to lowest:".format)
+        sorted_numbers_print.config(text="Numbers from highest to lowest: {}".format(numbers))
 
     except ValueError: 
         messagebox.showerror(title="Error", message="Please enter a valid number.")
@@ -39,6 +39,7 @@ def finding_the_largest_number():
 root = tk.Tk()
 root.title("Finding the largest digit")
 
+#User input
 firstnumber = tk.Entry(root, width=20)
 secondnumber = tk.Entry(root, width=20)
 thirdnumber = tk.Entry(root, width=20)
@@ -49,3 +50,20 @@ label2 = tk.Label(root, text="Enter second number:")
 label3 = tk.Label(root, text="Enter third number:")
 result_label = tk.Label(root, text="")
 sorted_numbers_print = tk.Label(root, text="")
+
+#Creating a button
+compare_button = tk.Button(root, text="Compare Numbers", command=find_largest)
+
+#Layout
+label1.grid(row=0, column=0, sticky='w')
+firstnumber.grid(row=0, column=1)
+label2.grid(row=0, column=0, sticky='w')
+secondnumber.grid(row=0, column=1)
+label3.grid(row=0, column=0, sticky='w')
+thirdnumber.grid(row=0, column=1)
+
+compare_button.grid(row=3, column=0, columnspan=2, pady=10)
+result_label.grid(row=4, column=0, columnspan=2)
+sorted_numbers_print.grid(row=5, column=0, columnspan=2)
+
+root.mainloop
