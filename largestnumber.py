@@ -45,14 +45,15 @@ secondnumber = tk.Entry(root, width=15)
 thirdnumber = tk.Entry(root, width=15)
 
 #Labels
-label1 = tk.Label(root, text="Enter first number:", font=("Helvetica", 10, "bold"))
-label2 = tk.Label(root, text="Enter second number:", font=("Helvetica", 10, "bold"))
-label3 = tk.Label(root, text="Enter third number:", font=("Helvetica", 10, "bold"))
+label1 = tk.Label(root, text="Enter the first number:", font=("Helvetica", 10, "bold"))
+label2 = tk.Label(root, text="Enter the second number:", font=("Helvetica", 10, "bold"))
+label3 = tk.Label(root, text="Enter the third number:", font=("Helvetica", 10, "bold"))
 result_label = tk.Label(root, text="", font=("Helvetica", 10, "bold"))
 sorted_numbers_print = tk.Label(root, text="", font=("Helvetica", 10))
 
 #Creating a button
-compare_button = tk.Button(root, text="Compare Numbers", command=find_largest)
+compare_button = tk.Button(root, text="Compare Numbers", command=find_largest, bg='#4caf50', fg='white')
+
 
 #Layout
 label1.grid(row=0, column=0, sticky='w')
