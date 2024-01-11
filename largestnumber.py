@@ -1,6 +1,8 @@
-#Ask input from the user
+import tkinter as tk
+from tkinter import messagebox
 
-while True:
+#Ask input from the user
+def finding_the_largest_number():
     try: 
         #Enter the first number
         num1 = int(input("Enter first number: "))
@@ -11,33 +13,25 @@ while True:
         #Enter the third number
         num3 = int(input("Enter third number: "))
 
-        #Break out of the loop if all the inputs are successful
-        break
+    # Create a list of the numbers
+        numbers = [num1, num2, num3]
+
+    #Compare the 3 given numbers
+        if num1 >= num2 and num1 >= num3:
+          largest = num1
+        elif num2 >= num1 and num2 >= num3:
+          largest = num2
+        else:
+           largest = num3
+
+    #Display the largest number
+        result_label.config(text="The largest number is:".format(largest))
+
+    # Sort the numbers in descending order
+        numbers.sort(reverse=True)
+
+    # Display the numbers from highest to lowest
+        sorted_numbers_print.config(text="Numbers from highest to lowest:".format(numbers))
 
     except ValueError: 
-        print ("Please enter a valid number.")
-
-# Create a list of the numbers
-numbers = [num1, num2, num3]
-
- #Compare the 3 given numbers
-if num1 >= num2 and num1 >= num3:
-    largest = num1
-if num2 >= num1 and num2 >= num3:
-    largest = num2
-else:
-    largest = num3
-
-#Print the largest number
-print("The largest number is:", largest)
-
-# Create a list of the numbers
-numbers = [num1, num2, num3]
-
-# Sort the numbers in descending order
-numbers.sort(reverse=True)
-
-# Display the numbers from highest to lowest
-print("Numbers from highest to lowest:")
-for number in numbers:
-    print(number)
+     messagebox.showerror(title="Error", message="Please enter a valid number.")
