@@ -25,7 +25,7 @@ def find_largest():
            largest = num3
 
         #Display the largest number
-        result_label.config(text="The largest number is:{}".format(largest))
+        result_label.config(text="The largest number is: {}".format(largest))
 
         # Sort the numbers in descending order
         numbers.sort(reverse=True)
@@ -40,16 +40,16 @@ root = tk.Tk()
 root.title("Finding the largest digit")
 
 #User input
-firstnumber = tk.Entry(root, width=20)
-secondnumber = tk.Entry(root, width=20)
-thirdnumber = tk.Entry(root, width=20)
+firstnumber = tk.Entry(root, width=15)
+secondnumber = tk.Entry(root, width=15)
+thirdnumber = tk.Entry(root, width=15)
 
 #Labels
-label1 = tk.Label(root, text="Enter first number:")
-label2 = tk.Label(root, text="Enter second number:")
-label3 = tk.Label(root, text="Enter third number:")
-result_label = tk.Label(root, text="")
-sorted_numbers_print = tk.Label(root, text="")
+label1 = tk.Label(root, text="Enter first number:", font=("Helvetica", 10, "bold"))
+label2 = tk.Label(root, text="Enter second number:", font=("Helvetica", 10, "bold"))
+label3 = tk.Label(root, text="Enter third number:", font=("Helvetica", 10, "bold"))
+result_label = tk.Label(root, text="", font=("Helvetica", 10, "bold"))
+sorted_numbers_print = tk.Label(root, text="", font=("Helvetica", 10))
 
 #Creating a button
 compare_button = tk.Button(root, text="Compare Numbers", command=find_largest)
