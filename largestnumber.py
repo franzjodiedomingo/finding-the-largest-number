@@ -58,9 +58,9 @@ secondnumber = tk.Entry(root, width=30)
 thirdnumber = tk.Entry(root, width=30)
 
 #Labels
-label1 = tk.Label(root, text="Enter the first number:", font=("Helvetica", 10, "bold"))
-label2 = tk.Label(root, text="Enter the second number:", font=("Helvetica", 10, "bold"))
-label3 = tk.Label(root, text="Enter the third number:", font=("Helvetica", 10, "bold"))
+label1 = tk.Label(root, text="Enter the first number:", font=("Helvetica", 10, "bold"), bg="#c7ecee")
+label2 = tk.Label(root, text="Enter the second number:", font=("Helvetica", 10, "bold"), bg="#c7ecee")
+label3 = tk.Label(root, text="Enter the third number:", font=("Helvetica", 10, "bold"), bg="#c7ecee")
 result_label = tk.Label(root, text="", font=("Helvetica", 10, "bold"))
 sorted_numbers_print = tk.Label(root, text="", font=("Helvetica", 10, "bold"))
 
