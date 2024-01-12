@@ -39,32 +39,46 @@ def find_largest():
 root = tk.Tk()
 root.title("Finding the largest digit")
 
+#Window size and position
+window_width = 400
+window_height = 350
+screen_width = root.winfo_screenwidth()
+screen_height = root.winfo_screenheight()
+x_position = (screen_width - window_width) // 2
+y_position = (screen_height - window_height) // 2
+root.geometry(f"{window_width}x{window_height}+{x_position}+{y_position}")
+
+canvas = tk.Canvas(root, width=window_width, height=window_height)
+canvas.pack()
+canvas.create_rectangle(0, 0, window_width, window_height, fill="#c7ecee")
+
 #User input
-firstnumber = tk.Entry(root, width=15)
-secondnumber = tk.Entry(root, width=15)
-thirdnumber = tk.Entry(root, width=15)
+firstnumber = tk.Entry(root, width=30)
+secondnumber = tk.Entry(root, width=30)
+thirdnumber = tk.Entry(root, width=30)
 
 #Labels
 label1 = tk.Label(root, text="Enter the first number:", font=("Helvetica", 10, "bold"))
 label2 = tk.Label(root, text="Enter the second number:", font=("Helvetica", 10, "bold"))
 label3 = tk.Label(root, text="Enter the third number:", font=("Helvetica", 10, "bold"))
 result_label = tk.Label(root, text="", font=("Helvetica", 10, "bold"))
-sorted_numbers_print = tk.Label(root, text="", font=("Helvetica", 10))
+sorted_numbers_print = tk.Label(root, text="", font=("Helvetica", 10, "bold"))
 
 #Creating a button
 compare_button = tk.Button(root, text="Compare Numbers", command=find_largest, bg='#4caf50', fg='white')
 
-
 #Layout
-label1.grid(row=0, column=0, sticky='w')
-firstnumber.grid(row=0, column=1)
-label2.grid(row=1, column=0, sticky='w')
-secondnumber.grid(row=1, column=1)
-label3.grid(row=2, column=0, sticky='w')
-thirdnumber.grid(row=2, column=1)
+label1.place(x=20, y=35)
+firstnumber.place(x=200, y=35)
 
-compare_button.grid(row=3, column=0, columnspan=2, pady=10)
-result_label.grid(row=4, column=0, columnspan=2)
-sorted_numbers_print.grid(row=5, column=0, columnspan=2)
+label2.place(x=20, y=85)
+secondnumber.place(x=200, y=85)
+
+label3.place(x=20, y=135)
+thirdnumber.place(x=200, y=135)
+
+compare_button.place(x=20, y=185, width=360, height=30)
+result_label.place(x=20, y=235, width=360, height=30)
+sorted_numbers_print.place(x=20, y=285, width=360, height=30)
 
 root.mainloop()
